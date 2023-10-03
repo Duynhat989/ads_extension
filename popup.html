@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/sweetalert2.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- <script src="./assets/JS/axios.min.js"></script> -->
+    <script src="./assets/js/socket.io.js"></script>
+    <title>Ads Google Extension</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Ads Google Extension</h1>
+    </div>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="form-save">
+                    <div class="mb-3 mt-3">
+                        <label for="uname" class="form-label">URL APP:</label>
+                        <input type="text" class="form-control" id="url" placeholder="Đường dẫn" name="uname"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desciption" class="form-label">Mô tả 1:</label>
+                        <textarea class="form-control" id="desciption_1" cols="30" rows="5" placeholder="Mô tả 1"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desciption" class="form-label">Mô tả 2:</label>
+                        <textarea class="form-control" id="desciption_2" cols="30" rows="5" placeholder="Mô tả 1"></textarea>
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 mt-3 col-4">
+                            <label for="uname" class="form-label">Giá thầu mặc định:</label>
+                            <input type="number" class="form-control" id="price_1" value="0" name="price_1"
+                                required>
+                        </div>
+                        <div class="mb-3 mt-3 col-4">
+                            <label for="uname" class="form-label">Giá thầu biến động:</label>
+                            <input type="number" class="form-control" id="price_2" value="0" name="price_2"
+                                required>
+                        </div>
+                        <div class="mb-3 mt-3 col-4">
+                            <label for="uname" class="form-label">Số tài khoản cần tạo:</label>
+                            <input type="number" class="form-control" id="count_create" value="0" name="count_create"
+                                required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <select class="form-select" id="type_Country">
+                            <option selected value="1">Danh sách quốc gia loại trừ</option>
+                            <option value="2">Chỉ chạy với quốc gia</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="desciption" class="form-label">Danh sách quốc gia:</label>
+                        <textarea class="form-control" id="country" cols="30" rows="5" placeholder="Danh sách quốc gia"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn_save">Lưu cấu hình</button>
+                    <button type="submit" class="btn btn-warning btn_running">Chạy</button>
+                    <button type="submit" class="btn btn-danger">Dừng</button>
+                    <div class="mb-3">
+                        <label for="desciption" class="form-label">Tiến trình hoàn thành ( <span><span id="run_proccess">0</span>/100 %</span>)</label>
+                        <input type="range" class="form-range" value="10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="foote"></div>
+</body>
+<style>
+    .btn{
+        width: 250px;
+    }
+</style>
+<!-- Latest compiled JavaScript -->
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/sweetalert2.all.min.js"></script>
+<script type="module" src="./assets/js/time.js"></script>
+
+</html>
